@@ -1,0 +1,57 @@
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Set your Settings"
+            android:id="@+id/tv_title" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Password :"
+            android:id="@+id/tv_pass"
+            android:layout_marginTop="71dp" android:layout_below="@+id/tv_title" android:layout_alignParentLeft="true"
+            android:layout_marginLeft="46dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Backup number:"
+            android:id="@+id/tv_number" android:layout_centerVertical="true" android:layout_alignLeft="@+id/tv_pass"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Code:"
+            android:id="@+id/tv_code"
+            android:layout_below="@+id/tv_number" android:layout_alignLeft="@+id/tv_number"
+            android:layout_marginTop="101dp"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_pass2"
+            android:layout_below="@+id/tv_pass" android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="true"/>
+    <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/et_number"
+              android:layout_below="@+id/tv_number" android:layout_alignParentLeft="true"
+              android:layout_alignParentRight="true"/>
+    <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/et_code"
+              android:layout_below="@+id/tv_code"
+              android:layout_alignParentLeft="true" android:layout_alignParentRight="true"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:id="@+id/button_submit" android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/tv_number"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="exit"
+            android:id="@+id/btn_exit"
+            android:layout_alignParentBottom="true" android:layout_toRightOf="@+id/tv_title"/>
+</RelativeLayout>
