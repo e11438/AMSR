@@ -12,6 +12,7 @@ import android.widget.EditText;
  * Created by e11438 on 7/11/2015.
  */
 public class SetAtt extends Activity{
+	public static String ds="";
     public  void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.second);
@@ -29,6 +30,7 @@ public class SetAtt extends Activity{
         et_pass.setText(settings1.getString("pass", ""));
         et_number.setText(settings1.getString("number", ""));
         et_code.setText(settings1.getString("code", ""));
+       // public String gd = "";
 
         b.setOnClickListener(new View.OnClickListener() {
                                  @Override
@@ -36,13 +38,20 @@ public class SetAtt extends Activity{
                                      String pass=et_pass.getText().toString();
                                      String number=et_number.getText().toString();
                                      String code=et_code.getText().toString();
-
+ds=code;
                                      SharedPreferences settings = getSharedPreferences("myPref", 0);
                                      SharedPreferences.Editor editor = settings.edit();
                                      editor.putString("pass",pass);
                                      editor.putString("number",number);
                                      editor.putString("code",code);
                                      editor.commit();
+                                     
+                                    /* Intent i= new Intent(SetAtt.this,SmsReceiver.class); 
+                                     Bundle b = new Bundle();
+                                     //b.putString("code",cod                                     i.putExtra("code",code);
+//                                     startService(i);
+                                     sendBroadcast(i);*/
+                                     
                                      finish();
                                  }
                              }
